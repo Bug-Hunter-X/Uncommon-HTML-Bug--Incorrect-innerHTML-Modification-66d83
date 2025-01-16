@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <div id="myDiv2"></div>
+  <script>
+    // Check if the element exists before modification
+    const element = document.getElementById('myDiv2');
+    if (element) {
+      element.innerHTML = "This text will show.";
+    } else {
+      console.error("Element with ID 'myDiv2' not found.");
+    }
+  </script>
+</body>
+</html>
